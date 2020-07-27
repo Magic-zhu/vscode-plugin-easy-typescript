@@ -1,9 +1,9 @@
 {
 	"name": "easytypescript",
 	"displayName": "Easy Typescript",
-    "description": "ts->js when on save",
-    "publisher": "magic-zhu",
-	"version": "0.0.2",
+	"description": "ts->js when on save",
+	"publisher": "magic-zhu",
+	"version": "0.0.3",
 	"engines": {
 		"vscode": "^1.47.2"
 	},
@@ -11,12 +11,11 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onLanguage:typescript"
+		"onLanguage:typescript"
 	],
 	"main": "./extension.js",
 	"contributes": {
-		"commands": [
-		]
+		"commands": []
 	},
 	"scripts": {
 		"lint": "eslint .",

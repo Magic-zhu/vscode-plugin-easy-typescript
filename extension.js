@@ -17,20 +17,20 @@ const checkEnv =()=>{
         })
     })
 }
-
 /**
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
     console.log('"easytypescript" is now active!');
+    console.log(vscode.window)
     checkEnv().then(()=>{
-        vscode.window.setStatusBarMessage('easy typescript 正在使用中');
+        vscode.window.setStatusBarMessage('Easy Typescript active');
         let didSaveEvent = vscode.workspace.onDidSaveTextDocument((doc)=>{
-            vscode.window.showWarningMessage('编译中......')
             if(doc.fileName.endsWith('.ts')){
+                vscode.window.showWarningMessage('compiling......')
                 child.exec(`tsc ${doc.fileName}`,(err)=>{
                     if(!err){
-                        vscode.window.showInformationMessage('编译成功')
+                        vscode.window.showInformationMessage('compile success')
                     }else{
                         vscode.window.showErrorMessage(err)
                     }

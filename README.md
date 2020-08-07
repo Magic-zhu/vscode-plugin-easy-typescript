@@ -1,4 +1,4 @@
-# readme
+# overview
 
 `npm install typescript -g` first
 

@@ -27,14 +27,18 @@ function activate(context) {
         vscode.window.setStatusBarMessage('Easy Typescript active');
         let didSaveEvent = vscode.workspace.onDidSaveTextDocument((doc)=>{
             if(doc.fileName.endsWith('.ts')){
-                vscode.window.showWarningMessage('compiling......')
-                child.exec(`tsc ${doc.fileName}`,(err)=>{
-                    if(!err){
-                        vscode.window.showInformationMessage('compile success')
-                    }else{
-                        vscode.window.showErrorMessage(err)
-                    }
-                })
+                try{
+                    vscode.window.showWarningMessage('compiling......')
+                    child.exec(`tsc ${doc.fileName}`,(err)=>{
+                        if(!err){
+                            vscode.window.showInformationMessage('compile success')
+                        }else{
+                            vscode.window.showErrorMessage(err)
+                        }
+                    })
+                }catch(err){
+                    vscode.window.showErrorMessage('there was something wrong  o(╥﹏╥)o')
+                }
             }
         })
         context.subscriptions.push(didSaveEvent);

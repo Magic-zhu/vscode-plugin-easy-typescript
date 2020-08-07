@@ -12,7 +12,12 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 + Fixed 对bug的修复
 + Security 对安全的改进
 
-## [1.0.0] - 2020-07-24
+## [0.0.6] - 2020-08-07
+
+### Changed
+- solve error catch
+
+## [0.0.5] - 2020-07-24
 
 ### Added
 - compile typescript to javascript when `on save`(no babel , only compile)

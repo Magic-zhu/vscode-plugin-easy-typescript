@@ -3,7 +3,9 @@
 	"displayName": "Easy Typescript",
 	"description": "ts->js when on save",
 	"publisher": "magic-rui",
-	"version": "0.0.5",
+    "version": "0.0.6",
+    "repository": "https://github.com/Magic-zhu/vscode-plugin-easy-typescript.git",
+    "icon":"./easy.png",
 	"engines": {
 		"vscode": "^1.47.2"
 	},
